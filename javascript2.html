@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input  />
+    <button> Add </button>
+
+<script>
+    // create h1 in html
+    let heading = document.createElement("h1");
+    heading.innerText = "Hello Students";
+    document.body.append(heading);
+
+    // todo list app
+    let input = document.querySelector("input");
+    let button = document.querySelector("button");
+
+    button.onclick = () => {
+        let p = document.createElement("p");
+        p.innerText = input.value;
+        document.body.append(p);
+        p.onclick = () => {
+            p.remove();
+        }
+
+    }
+</script>
+</body>
+</html>

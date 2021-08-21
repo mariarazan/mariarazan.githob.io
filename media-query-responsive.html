@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(45deg, white, rgb(139, 139, 139));
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            display: flex;
+            
+        }
+        .box {
+            height: 200px;
+            flex-grow: 1;
+            margin: 10px;
+            background: mediumaquamarine;
+        }
+
+        /* break points */
+
+        @media screen and (max-width: 700px){
+            .container {
+                flex-direction: column;
+            }
+        }
+
+
+        @media screen and (min-width: 700px) and (max-width: 900px){
+            .box {
+                background: mediumvioletred;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

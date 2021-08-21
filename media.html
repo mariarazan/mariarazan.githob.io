@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            width: 100vw;
+            display: flex;;
+
+        }
+        .box {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid red;
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 700px) and (min-width: 500px) {
+            .box {
+                background: red;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum non laborum optio inventore. Aspernatur dolore repellat molestias dignissimos nisi, numquam a neque error excepturi facilis, laborum cum dolores quod officiis ex, consequatur praesentium voluptatum expedita ipsum saepe. Tenetur earum fugit praesentium nihil neque vel porro laboriosam, sint expedita! Tenetur, expedita! </div>
+        <div class="box"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum non laborum optio inventore. Aspernatur dolore repellat molestias dignissimos nisi, numquam a neque error excepturi facilis, laborum cum dolores quod officiis ex, consequatur praesentium voluptatum expedita ipsum saepe. Tenetur earum fugit praesentium nihil neque vel porro laboriosam, sint expedita! Tenetur, expedita! </div>
+        <div class="box"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum non laborum optio inventore. Aspernatur dolore repellat molestias dignissimos nisi, numquam a neque error excepturi facilis, laborum cum dolores quod officiis ex, consequatur praesentium voluptatum expedita ipsum saepe. Tenetur earum fugit praesentium nihil neque vel porro laboriosam, sint expedita! Tenetur, expedita! </div>
+    </div>
+</body>
+</html>

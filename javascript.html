@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+</head>
+<body>
+    <h1 class="animate__animated"> Hello world</h1>
+    <input type="text"> <button>Add to list</button>
+
+<script>
+    let heading = document.querySelector("h1");
+
+    // primitive values
+    let falsy = null && undefined;
+    let text = "Any text"
+    let number = 15;
+    let boolean = false;
+    //
+    let list = [13, 23, 23];
+    let object = {
+        text : "text",
+        number: "number",
+        object: {},
+        list: [],
+    }
+
+    let post = [
+        {
+            title: "asdasdasdasd",
+            body: "asdsadasdasdasdasdasdas",
+            time: new Date(), 
+            id: "sdasddsa",
+            imageLink: "sdasdasd",
+            userName: "Aneur Khaldi",
+            commentsLink: "sdasdasd"
+        },
+        {
+            title: "asdasdasdasd",
+            body: "asdsadasdasdasdasdasdas",
+            time: new Date(), 
+            id: "sdasddsa"
+        },
+        {
+            title: "asdasdasdasd",
+            body: "asdsadasdasdasdasdasdas",
+            time: new Date(), 
+            id: "sdasddsa"
+        },        {
+            title: "asdasdasdasd",
+            body: "asdsadasdasdasdasdasdas",
+            time: new Date(), 
+            id: "sdasddsa"
+        },
+        {
+            title: "asdasdasdasd",
+            body: "asdsadasdasdasdasdasdas",
+            time: new Date(), 
+            id: "sdasddsa"
+        }
+    ]
+    heading.onclick = () => {
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        heading.style.background = "#" + randomColor;
+        heading.classList.toggle("animate__backInDown");
+        heading.setAttribute("sdasdas", "sdasdasd")
+    }
+
+    let input = document.querySelector("input");
+    let button = document.querySelector("button");
+    button.onclick = () => {
+        if (input.value) {
+            let p = document.createElement("p");
+            p.innerText = input.value;
+            p.onclick = () => {
+                p.remove()
+            }
+            document.body.append(p)
+        }
+        else {
+            alert("No value")
+        }
+
+    }
+
+
+    let triangle = (n) => {
+        for(let i = 1; i <= n; i++) {
+                console.log("#".repeat(i))
+        }
+    }
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: "POST",
+    })
+    .then((response) => response.json())
+    .then((list) => {
+        list.map(post => {
+            let title = document.createElement("p");
+            let postText = document.createElement("p");
+
+            title.innerText = post.title;
+            postText.innerText = post.body;
+
+            document.body.append(title)
+            document.body.append(postText)
+        })
+    });
+
+</script>
+</body>
+</html>
